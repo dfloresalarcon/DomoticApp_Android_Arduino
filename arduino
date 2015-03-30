@@ -1,0 +1,43 @@
+/*
+  Arduino + Bluetooth
+  Tutorial en: http://diymakers.es/arduino-bluetooth/
+*/
+ 
+#include <SoftwareSerial.h> //Librería que permite establecer comunicación serie en otros pins
+ //‎SoftwareSerial(rxPin, txPin);
+//Aquí conectamos los pins RXD,TDX del módulo Bluetooth.
+//Son la inversa del bluetooth
+//
+SoftwareSerial BT(10,11); 
+ 
+int led=13;´´´´´´´´´´´´´´
+
+char cadena[255]; //Creamos un array de caracteres de 256 cposiciones
+int i=0; //Tamaño actual del array
+ 
+void setup()
+{
+  BT.begin(9600);
+  Serial.begin(9600);
+  pinMode(led,OUTPUT);
+}
+ 
+void loop()
+{
+  //Cuando haya datos disponibles
+  if(BT.available())
+  {
+    char dato=(char) BT.read(); //Guarda los datos carácter a carácter en la variable "dato"
+ if(dato=='Y'){
+         digitalWrite(led,HIGH);
+      }
+if(dato=='N')
+      {
+        digitalWrite(led,LOW);
+      }
+ 
+ 
+    
+    
+  }
+}
