@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="320dp"
+    android:layout_height="200dp"
+    android:background="#E2A9F3"
+    android:textAlignment="center"
+    >
+
+    <TextView
+        android:text="Version: 1.0\nDesigned by DOM S.L.\nDomótica Doméstica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:textColor="#BF00FF"
+        />
+
+</LinearLayout>
